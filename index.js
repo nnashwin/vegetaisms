@@ -68,7 +68,7 @@ function getLocalizedQAObj(lang) {
     return require(`./data/quotes/qa/${lang.toLowerCase()}`);
 }
 
-exports.askVegeta = function (question, lang) {
+exports.askASaiyan = function (question, lang) {
     lang = !lang ? 'en' : lang;
 
     const qaObj = getLocalizedQAObj(lang);
