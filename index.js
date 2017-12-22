@@ -1,0 +1,46 @@
+const vegetaisms = require('./data/en.json');
+const languages = new Set([
+    'en'
+]);
+
+const repoUrl = "https://github.com/ru-lai/vegetaisms";
+
+function getLocalizedList(lang) {
+    if (!lang || lang === 'en') {
+        return vegetaisms;
+    }
+
+    if (!languages.has(lang)) {
+        throw new Error(`The localization list does not have the language ${lang}.  Please make a pull request to see your language here! ${repoUrl}`);
+    }
+
+    return require(`./data/${lang.toLowerCase()}`);
+}
+
+const getRandomQuote = lang => {
+    const list = getLocalizedList(lang);
+
+    return list[Math.floor(Math.random() * list.length)];
+}
+
+exports.all = getLocalizedList;
+
+exports.random = getRandomQuote;
+
+function getQuoteById(id, lang) {
+    const list = getLocalizedList(lang);
+    // subtract by one in order to factor in Arrays starting from 0
+    const quote = list[id - 1];
+
+    if (!quote) {
+        throw new Error(`Quote with the id ${id} does not exist`);
+    }
+
+    return quote;
+}
+
+function getId(quote, lang) {
+    const list = getLocalizedList(lang);
+
+    const id = list.indexOf(quote);
+}
