@@ -1,3 +1,5 @@
+const uniqueRandomArray = require('unique-random-array');
+
 const vegetaisms = require('./data/en.json');
 const languages = new Set([
     'en'
@@ -20,7 +22,7 @@ function getLocalizedList(lang) {
 const getRandomQuote = lang => {
     const list = getLocalizedList(lang);
 
-    return list[Math.floor(Math.random() * list.length)];
+    return uniqueRandomArray(list);
 }
 
 function getQuoteById(id, lang) {
