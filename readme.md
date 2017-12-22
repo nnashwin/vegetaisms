@@ -28,4 +28,4 @@ vegeta.askASaiyan("What does the scouter say about his power level?");
 //=> "IT'S OVER 9000!!!"
 ```
 
-## Open for additions, but please read which quotes we already have first
+## Open for additions to quotes, but please read what we already have first
