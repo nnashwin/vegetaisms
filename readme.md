@@ -21,8 +21,8 @@ vegeta.getName(3);
 vegeta.getId("Silly robot, do you really believe you have any chance against a Super Saiyan like me? Your circuits must be malfunctioning. Fresh out of the factory with no warranty and already broken. Such a pity.");
 //=> 3
 
-vegeta.askASaiyan("What does his power level say?");
+vegeta.askASaiyan("What does the scouter say about his power level?");
 //=> "IT'S OVER 9000!!!"
 ```
 
-# Open for additions, but please read which quotes we already have first
+## Open for additions, but please read which quotes we already have first
