@@ -1,0 +1,38 @@
+{
+  "name": "vegetaisms",
+  "version": "1.0.0",
+  "description": "- The title says it all, this is a module which will display a random quotes by the baddest prince of saiyans around: Vegeta",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "ava": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ru-lai/vegetaisms.git"
+  },
+  "keywords": [
+    "vegeta",
+    "dbz",
+    "dragon ball Z",
+    "list",
+    "words"
+  ],
+  "author": {
+    "name": "Tyler Ru-Lai",
+    "email": "ru.lai.development@gmail.com"
+  },
+  "files": [
+    "index.js",
+    "data"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ru-lai/vegetaisms/issues"
+  },
+  "homepage": "https://github.com/ru-lai/vegetaisms#readme"
+}
