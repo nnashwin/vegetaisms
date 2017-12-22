@@ -43,4 +43,12 @@ function getId(quote, lang) {
     const list = getLocalizedList(lang);
 
     const id = list.indexOf(quote);
+
+    if (id === -1) {
+        throw new Error(`The Quote '${quote}' does not exist in the json.  Please feel free to submit a submit a pull request at ${repoUrl}`);
+    }
+
+    return id;
 }
+
+exports.languages = languages;
