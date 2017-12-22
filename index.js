@@ -46,7 +46,7 @@ function getIdByQuote(quote, lang) {
         throw new Error(`The Quote '${quote}' does not exist in the json.  Please feel free to submit a submit a pull request at ${repoUrl}`);
     }
 
-    return id;
+    return id + 1;
 }
 
 exports.getQuote = getQuoteById;
