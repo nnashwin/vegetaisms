@@ -1,6 +1,9 @@
 const uniqueRandomArray = require('unique-random-array');
 
-const vegetaisms = require('./data/en.json');
+const vegetaisms = require('./data/quotes/en.json');
+
+const vegetaQA = require('./data/qa/qa-en.json');
+
 const languages = new Set([
     'en'
 ]);
@@ -16,10 +19,10 @@ function getLocalizedList(lang) {
         throw new Error(`The localization list does not have the language ${lang}.  Please make a pull request to see your language here! ${repoUrl}`);
     }
 
-    return require(`./data/${lang.toLowerCase()}`);
+    return require(`./data/quotes/${lang.toLowerCase()}`);
 }
 
-const getRandomQuote = lang => {
+function getRandomQuote (lang) {
     const list = getLocalizedList(lang);
 
     return uniqueRandomArray(list);
@@ -49,11 +52,41 @@ function getIdByQuote(quote, lang) {
     return id + 1;
 }
 
+/* 
+ ** QA Section
+*/
+
+function getLocalizedQAObj(lang) {
+    if (!lang || lang === 'en') {
+        return vegetaQA;
+    }
+
+    if (!languages.has(lang)) {
+        throw new Error(`The localization list does not have the language ${lang}.  Please make a pull request to add your language here! ${repoUrl}`);
+    }
+
+    return require(`./data/quotes/qa/${lang.toLowerCase()}`);
+}
+
+exports.askVegeta = function (question, lang) {
+    lang = !lang ? 'en' : lang;
+
+    const qaObj = getLocalizedQAObj(lang);
+
+    if (qaObj[question] === undefined) {
+        throw new Error(`Vegeta does not know how to answer the question '${question}', Please make a pull request to add your question and answer here! ${repoUrl}`)
+    }
+
+    return qaObj[question];
+}
+
 exports.getQuote = getQuoteById;
 
 exports.getId = getIdByQuote;
 
 exports.all = getLocalizedList;
+
+exports.getQAObj = getLocalizedQAObj;
 
 exports.random = getRandomQuote;
 
