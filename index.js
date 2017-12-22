@@ -23,10 +23,6 @@ const getRandomQuote = lang => {
     return list[Math.floor(Math.random() * list.length)];
 }
 
-exports.all = getLocalizedList;
-
-exports.random = getRandomQuote;
-
 function getQuoteById(id, lang) {
     const list = getLocalizedList(lang);
     // subtract by one in order to factor in Arrays starting from 0
@@ -39,7 +35,7 @@ function getQuoteById(id, lang) {
     return quote;
 }
 
-function getId(quote, lang) {
+function getIdByQuote(quote, lang) {
     const list = getLocalizedList(lang);
 
     const id = list.indexOf(quote);
@@ -50,5 +46,15 @@ function getId(quote, lang) {
 
     return id;
 }
+
+exports.getQuote = getQuoteById;
+
+exports.getId = getIdByQuote;
+
+exports.all = getLocalizedList;
+
+exports.random = getRandomQuote;
+
+
 
 exports.languages = languages;
