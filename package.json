@@ -2,10 +2,11 @@
   "name": "vegetaisms",
   "version": "1.0.0",
   "description": "- The title says it all, this is a module which will display a random quotes by the baddest prince of saiyans around: Vegeta",
-  "license": "MIT",
+  "license": "ISC",
   "main": "index.js",
   "dependencies": {
-    "ava": "*"
+    "ava": "*",
+    "unique-random-array": "^1.0.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -30,7 +31,6 @@
     "index.js",
     "data"
   ],
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/ru-lai/vegetaisms/issues"
   },
