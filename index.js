@@ -55,6 +55,4 @@ exports.all = getLocalizedList;
 
 exports.random = getRandomQuote;
 
-
-
 exports.languages = languages;
