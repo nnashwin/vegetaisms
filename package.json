@@ -1,6 +1,6 @@
 {
   "name": "vegetaisms",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "- The title says it all, this is a module which will display a random quotes by the baddest prince of saiyans around: Vegeta",
   "license": "ISC",
   "main": "index.js",
