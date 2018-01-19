@@ -1,7 +1,9 @@
 # Random Vegeta Quotes:
- - The title says it all, this is a module which will display a random quotes by the baddest prince of saiyans around: Vegeta
+> The title says it all, this is a module which will display a random quotes by the baddest prince of saiyans around: Vegeta
 
  # vegetaisms [![Build Status](https://travis-ci.org/ru-lai/vegetaisms.svg?branch=master)](https://travis-ci.org/ru-lai/vegetaisms)
+
+ ![](vegeta.jpg)
 
 
 ## Install
