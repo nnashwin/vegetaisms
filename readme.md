@@ -9,7 +9,7 @@
 ## Install
 
 ```
-$ npm install --save pokemon
+$ npm install --save vegetaisms
 ```
 
 ## Usage
